@@ -14,8 +14,9 @@ const PORT = process.env.PORT || 5000;
 app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 app.use(cookieParser());
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:3000'];
 const corsOption={
-    origin:"*",
+    origin: allowedOrigins,
     credentials:true
 };
 app.use(cors(corsOption)); 
