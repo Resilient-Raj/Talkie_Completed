@@ -37,6 +37,9 @@ const Login = () => {
   }
   return (
     <div className="min-w-96 mx-auto">
+      
+      <h1 className='text-4xl font-bold text-center mb-2 text-black '>Welcome to Talkie!</h1>
+      <p className='text-sm text-center text-black mb-4'>Login to Your Account</p>
       <div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-blue-950'>
         <h1 className='text-3xl font-bold text-center'>Login</h1>
         <form onSubmit={onSubmitHandler} action="">
