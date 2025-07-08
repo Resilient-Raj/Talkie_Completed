@@ -16,8 +16,11 @@ app.use(express.json());
 app.use(cookieParser());
 const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:3000'];
 const corsOption={
-    origin: 'https://talkie-completed-fe.onrender.com',
-    credentials:true
+  origin: 'https://talkie-completed-fe.onrender.com', 
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+
 };
 app.use(cors(corsOption)); 
 
